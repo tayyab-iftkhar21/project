@@ -1,0 +1,520 @@
+:root{
+    --gradient:linear-gradient(70deg,  rgb(158, 192, 33)), black;
+}
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    border:none; outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+
+*::selection{
+    background:black;
+    color:#fff;
+}
+
+body{
+    font-family: 'poppins', sans-serif;
+   background: url(about/mercedez.jpg);
+   background-size: 130rem;
+   background-repeat: no-repeat;
+   position: relative;
+}
+
+
+html{
+    font-size: 64.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar{
+    width:1.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#333;
+}
+
+html::-webkit-scrollbar-thumb{
+    background: linear-gradient(70deg,  rgb(158, 192, 33), black);
+}
+
+.btn1 {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.btn1:before {
+    content: '';
+    background: linear-gradient(45deg,  #48ff00, rgb(158, 192, 33));
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn1:active {
+    color: rgb(230, 219, 219)
+}
+
+.btn1:active:after {
+    background: transparent;
+}
+
+.btn1:hover:before {
+    opacity: 1;
+}
+
+.btn1:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+.heading{
+    color:#444;
+    padding:1rem;
+    font-size: 4rem;
+    text-align: center;
+}
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top:0; left: 0;
+    z-index: 1000;
+    padding:1.5rem 7%;
+
+}
+
+header .logo{
+    display: flex;
+    align-items: center;
+    
+}
+
+header .logo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+   
+}
+
+header .navbar ul{
+    margin:0;
+  padding:0;
+  display:flex;
+}
+
+header .navbar ul li{
+    list-style:none;
+  margin:0 20px;
+  transition:0.5s;
+}
+
+header .navbar ul li a{
+    display: block;
+  position:relative;
+  text-decoration:none;
+  padding:5px;
+  font-size:18px;
+  font-family: sans-serif;
+  color:#fff;
+  text-transform:uppercase;
+  transition:0.5s;
+}
+
+header .navbar ul li a.active{
+    color: rgb(158, 192, 33);
+    text-decoration: underline rgb(158, 192, 33);
+}
+header .navbar ul li a:hover{
+    transform:scale(2);
+    opacity:1;
+    filter:blur(0);
+    text-decoration:none;
+    /* color:#fff; */
+}
+
+ul:hover li a{
+    transform:scale(1);
+  opacity:0.2;
+  filter:blur(2px);
+}
+
+header #menu{
+    font-size: 3rem;
+    color:#fff;
+    cursor: pointer;
+    display: none;
+    
+}
+
+
+
+
+
+.container1 {
+    height: 100vh;
+}
+
+.main-box {
+    display: flex;
+    margin: auto;
+    padding-top: 19rem;
+    padding-left: 5rem;
+}
+
+.firstHalf {
+    width: 75%;
+    display: flex;
+    flex-direction: column; 
+}
+
+.text-big {
+    font-size: 6rem;
+    font-weight: 900 ;
+    text-transform: uppercase;
+    color:rgb(255, 255, 255);
+    
+}
+
+.text-small {
+    font-size: 4rem;
+    font-weight: 900 ;
+    text-transform: uppercase;
+    color:rgb(0, 0, 0);
+}
+.center {
+    text-transform: uppercase;
+    font-size: 2rem;
+    color: #000;
+    font-weight: 900;
+    
+}
+.disc{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10rem;
+}
+.disc p{
+    font-size: 15px;
+    align-items: center;
+    margin-right: 9rem;
+}
+
+
+.testimonial{
+    padding-top: 100px;
+    background: white;
+    margin-top: 80px;
+    padding: 30px 0;
+}
+
+.testimonial .col-3{
+    text-align: center;
+    padding: 40px 20px;
+    box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.5s;
+}
+.testimonial .col-3:hover{
+    transform: translateY(-10px);
+}
+
+
+
+.testimonial .col-3 img{
+    width: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+}
+.col-3 p{
+    font-size: 12px;
+    margin: 12px 0;
+    color: #777;
+}
+.testimonial .col-3 h3{
+    font-weight: 600;
+    color: #555;
+    font-size: 16px;
+}
+.small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;    
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-bottom: 8rem;
+}
+.he1{
+    text-align: center;
+    padding-bottom: 38px;
+    font-weight: 900;
+    text-decoration: underline;
+}
+.about3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #000000;
+    border-top: 7px solid gray;
+    padding-bottom: 70px;
+    
+}
+
+.about3 .image{
+  
+    flex:1 1 40rem;
+  
+
+}
+
+.about3 .image iframe{
+    height: 50vh;
+    width:100%;
+    
+}
+
+.about3 .content{
+   
+    flex:1 1 40rem;
+}
+
+.about3 .content h3{
+    font-size: 3.9rem;
+    color:rgb(255, 255, 255);
+    padding: 0rem 4rem;
+    font-weight: bold;
+}
+
+.about3 .content p{
+    font-size: 1.7rem;
+    color:rgb(255, 255, 255);
+    padding:1rem 4rem;
+}
+
+/* =========footer===== */
+.footer{
+    background: #000;
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer p{
+    color: #8a8a8a;
+}
+.footer h3{
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.footer-col-1, .footer-col-2, .footer-col-3, .footer-col-4{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-col-1{
+    flex-basis: 30%;
+}
+
+.footer-col-2{
+    flex: 1;
+    text-align: center;
+}
+.footer-col-2 img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-col-3, .footer-col-4{
+    flex-basis: 12%;
+    text-align: center;
+}
+ul{
+    list-style: none;
+}
+
+.app-logo{
+    margin-top: 20px;
+
+}
+.app-logo img{
+    width: 140px;
+}
+.footer hr{
+    border: none;
+    background: #b5b5b5;
+    height: 1px;
+    margin: 20px 0;
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 55%;
+    }
+    
+
+    header #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:-120%; left:0;
+        width:100%;
+        background:#444;
+    }
+
+    header .navbar ul{
+        flex-flow: column;
+        padding:2rem 0;
+    }
+
+    header .navbar ul li{
+        margin:1.5rem 0;
+        text-align: center;
+        width:100%;
+    }
+
+    header .navbar ul li a{
+        font-size: 2.5rem;
+        display: block;
+    }
+
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover{
+        color: rgb(158, 192, 33);
+    }
+   
+    .container1 .text-big{
+        font-size: 5rem;
+
+    }
+    .text-small{
+        font-size: 3rem;
+        color: white;
+    }
+    .center{
+        color: #fff;
+        font-size: 3rem;
+    }
+    .testimonial .row{
+        display: contents;
+        flex-flow: column;
+        
+    }
+    .testimonial .row .col-3{
+        width: 50rem;
+    }
+    .map{
+        width: 50rem;
+        height: 80rem;
+    }
+    .testimonial1{
+        display: block;
+    position: relative;
+    bottom: 27rem;
+    }
+
+    .testimonial1 .disc h1{
+        font-size: 4rem;
+        font-weight: 800;
+      
+       
+
+    }
+    .testimonial1 .disc p{
+        font-size: 18px;
+        
+    }
+    
+  
+    
+}
+
+@media (max-width:500px){
+
+    html{
+        font-size: 50%;
+    }
+
+   
+    .footerimg img{
+        display: block;
+        width: 48rem;
+        padding-right: 20px;
+
+    }
+    
+    
+
+
+
+    
+
+
+}
+
+@media (max-width:380px){
+
+    html{
+        font-size: 45%;
+    }
+
+    
+
+
+}
+
+
+
+
+
+
+
